@@ -47,3 +47,29 @@ As with ridge regression, when the least squares estimates have exces- sively hi
 - 이 경우 ||beta hat of R||은 OLS의 norm과 같기에 비는 1이 된다.
 
 ![](https://media.springernature.com/lw785/springer-static/image/chp%3A10.1007%2F978-1-4614-7138-7_6/MediaObjects/978-1-4614-7138-7_6_Fig4_HTML.gif)
+
+## Elastic Net Regression
+
+- Elastic regression generally works well when we have a big dataset.
+
+Note, here we had two parameters alpha and l1_ratio. First let’s discuss, what happens in elastic net, and how it is different from ridge and lasso.
+
+Elastic net is basically a combination of both L1 and L2 regularization. So if you know elastic net, you can implement both Ridge and Lasso by tuning the parameters. So it uses both L1 and L2 penality term.
+
+So how do we adjust the lambdas in order to control the L1 and L2 penalty term? Let us understand by an example. You are trying to catch a fish from a pond. And you only have a net, then what would you do? Will you randomly throw your net? No, you will actually wait until you see one fish swimming around, then you would throw the net in that direction to basically collect the entire group of fishes. Therefore even if they are correlated, we still want to look at their entire group.
+
+Elastic regression works in a similar way. Let’ say, we have a bunch of correlated independent variables in a dataset, then elastic net will simply form a group consisting of these correlated variables. Now if any one of the variable of this group is a strong predictor (meaning having a strong relationship with dependent variable), then we will include the entire group in the model building, because omitting other variables (like what we did in lasso) might result in losing some information in terms of interpretation ability, leading to a poor model performance.
+
+We need to define alpha and l1_ratio while defining the model. Alpha and l1_ratio are the parameters which you can set accordingly if you wish to control the L1 and L2 penalty separately. Actually, we have
+
+Alpha = a + b           and     l1_ratio =  a / (a+b)
+
+where, a and b weights assigned to L1 and L2 term respectively. So when we change the values of alpha and l1_ratio, a and b are set aaccordingly such that they control trade off between L1 and L2 as:
+
+a * (L1 term) + b* (L2 term)
+
+Let alpha (or a+b) = 1, and now consider the following cases:
+
+If l1_ratio =1, therefore if we look at the formula of l1_ratio, we can see that l1_ratio can only be equal to 1 if a=1, which implies b=0. Therefore, it will be a lasso penalty.
+Similarly if l1_ratio = 0, implies a=0. Then the penalty will be a ridge penalty.
+For l1_ratio between 0 and 1, the penalty is the combination of ridge and lasso.
