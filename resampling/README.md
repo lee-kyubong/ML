@@ -15,10 +15,10 @@
 
 #### b. LOOCV(leave-one-out cross-validation)
     - 관측 데이터 셋을 두 부분으로 분할하되, n-1개 data로 모델 적합 후 제외된 데이터에 적용해 MSE를 구한다.
-    - CV = 1/n(sum(all MSE))
+    - CV = 1/n * (sum(all MSE))
     - 편향이 적고, 여러번 수행해도 항상 동일한 결과 얻어진다.
 #### c. k-fold CV
-    - CV = 1/k(sum(all MSE))
+    - CV = 1/k * (sum(all MSE))
     - 계산량이 적고, 편향-분산 절충 관점에서 LOOCV 대비 적은 분산을 갖는 이점이 있다.(상관성 높은 값들의 평균은 분산이 큼)
     
 #### ex) CV로 산출된 test MSE 곡선에서 최소값의 위치(유연성 - 다항식 포함 정도)를 파악해 각 모델의 '성능을 평가'하고 특정 '모델을 선택'한다.
