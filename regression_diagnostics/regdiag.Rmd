@@ -2,10 +2,10 @@
 title: "Regression Diagnostics"
 author: "Kyubong Theodore Lee"
 output:
-  md_document:
-    variant: markdown_github
   pdf_document:
     latex_engine: xelatex
+  md_document:
+    variant: markdown_github
 mainfont: D2Coding
 ---
 ***
