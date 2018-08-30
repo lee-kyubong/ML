@@ -1,7 +1,12 @@
 ---
 title: "Regression Diagnostics"
 author: "Kyubong Theodore Lee"
-output: html_document
+output:
+  md_document:
+    variant: markdown_github
+  pdf_document:
+    latex_engine: xelatex
+mainfont: D2Coding
 ---
 ***
 ##### 적합으로 회귀분석은 끝나지 않는다.
