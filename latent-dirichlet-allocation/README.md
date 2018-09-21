@@ -1,4 +1,4 @@
-## [Python 구현 작업물 [자세히 보기]](https://github.com/lee-kyubong/daily/blob/master/Python/latent-dirichlet-allocation/document-clustering.ipynb_
+## [Python 구현 작업물 [자세히 보기]](https://github.com/lee-kyubong/daily/blob/master/Python/latent-dirichlet-allocation/document-clustering.ipynb)
 
 ## Topic Modeling
 - 문서 내 존재하는 토픽을 추출
