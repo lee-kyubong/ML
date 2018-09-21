@@ -1,3 +1,5 @@
+## [Python 구현 작업물 [자세히 보기]](https://github.com/lee-kyubong/daily/blob/master/Python/latent-dirichlet-allocation/document-clustering.ipynb_
+
 ## Topic Modeling
 - 문서 내 존재하는 토픽을 추출
 - 문서 분석의 경우, 어떤 단어가 특정하게 분포하는 것을 토픽(ex_ 보험에 대한 단어가 다른 단어보다 많이 나온다면 그 문서의 토픽은 보험과 연관됨)
